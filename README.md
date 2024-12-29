@@ -101,10 +101,3 @@ Contributing
 
 Feel free to fork this repository, make your changes, and submit a pull request. Contributions are always welcome!
 
-
----
-
-### Key Points:
-1. Replace placeholders like `your-username`, `your-repository`, and `your-feature-file.feature` with actual details from your project.
-2. Add additional sections as needed (e.g., FAQs, troubleshooting, etc.).
-3. Keep it concise yet informative, ensuring anyone can understand and use your project easily.
