@@ -32,8 +32,8 @@ src ├── main │   ├── java │   │   └── com.example.pages 
 ## Setup Instructions
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repository.git
-   cd your-repository
+   git clone https://github.com/gururajanayakr/Selenium4Banking.git
+   cd Selenium4Banking
 
 2. Install dependencies:
 
