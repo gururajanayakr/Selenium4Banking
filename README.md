@@ -1,4 +1,4 @@
-# Selenium4Banking is a Maven BDD Cucumber Framework with Page Object Model (POM) implementation
+# Selenium4Shopping is a Maven BDD Cucumber Framework with Page Object Model (POM) implementation
 This project demonstrates a **Selenium test automation framework** built using:
 - **Maven** for build and dependency management.
 - **Cucumber** for Behavior-Driven Development (BDD).
