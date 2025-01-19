@@ -1,0 +1,38 @@
+{
+  "createCustomerByManagerOne" : {
+    "fName" : "Gururaj",
+    "lName" : "Nayak",
+    "postCd" : "560011"
+  },
+  "createCustomerByManagerTwo" : {
+    "fName" : "Akshatha",
+    "lName" : "HV",
+    "postCd" : "560021"
+  },
+  "createCustomerByManagerThree" : {
+    "fName" : "Aaradhya",
+    "lName" : "Nayak",
+    "postCd" : "560031"
+  },
+  "createAccountByManagerOne" : {
+    "fName" : "Gururaj",
+    "lName" : "Nayak",
+    "postCd" : "560011",
+    "customerDropdown" : "---Customer Name---,Hermoine Granger,Harry Potter,Ron Weasly,Albus Dumbledore,Neville Longbottom,Gururaj Nayak",
+    "currencyDropdown" : "---Currency---,Dollar,Pound,Rupee"
+  },
+  "createAccountByManagerTwo" : {
+    "fName" : "Akshatha",
+    "lName" : "HV",
+    "postCd" : "560021",
+    "customerDropdown" : "---Customer Name---,Hermoine Granger,Harry Potter,Ron Weasly,Albus Dumbledore,Neville Longbottom,Akshatha HV",
+    "currencyDropdown" : "---Currency---,Dollar,Pound,Rupee"
+  },
+  "createAccountByManagerThree" : {
+    "fName" : "Aaradhya",
+    "lName" : "Nayak",
+    "postCd" : "560031",
+    "customerDropdown" : "---Customer Name---,Hermoine Granger,Harry Potter,Ron Weasly,Albus Dumbledore,Neville Longbottom,Aaradhya Nayak",
+    "currencyDropdown" : "---Currency---,Dollar,Pound,Rupee"
+  }
+}
