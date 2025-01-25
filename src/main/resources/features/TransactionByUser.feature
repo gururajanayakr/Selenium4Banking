@@ -3,20 +3,32 @@
     Scenario Outline: User initiating the transaction in the account
       Given user navigate to application url
       When login with "Customer Login" option
-      And select user for login "Harry Potter"
+      And select "<testCaseName>.name" from "Your Name" for login
+      And click on "Login" button
+      And user waits for 2 seconds
+      Then verify "Logout" button is displayed
+      And select the account number "<testCaseName>.accountNo" from "accountSelect"
+      And navigate to "Deposit" page
       And user fills the fields:
-      |  key  |  value                 |
-      |fName  | #<testCaseName>.fName  |
-      |lName  | #<testCaseName>.lName  |
-      |postCd | #<testCaseName>.postCd |
-      And click on "Add Customer" button
-      Then get "customerId" and accept the alert
-      And navigate to "Customers" page
-      And verify customer is created
+        |  key    |  value                         |
+        | amount  | #<testCaseName>.depositAmount  |
+      And click on "Deposit" button
+      And verify "Deposit Successful" message
+      And navigate to "Withdrawl" page
+      And user waits for 2 seconds
+      And user fills the fields:
+        |  key    |  value                         |
+        | amount  | #<testCaseName>.withdrawlAmount  |
+      And click on "Withdraw" button
+      And verify "Transaction successful" message
+      And navigate to "Transactions" page
+      And click on "Back" button
+      And Verify the balance amount from "noAccount" is matching with "<testCaseName>.balanceAmount"
+      And click on "Logout" button
       And close the browser
 
     Examples:
       | testCaseName |
-      | createCustomerByManagerOne |
-      | createCustomerByManagerTwo |
-      | createCustomerByManagerThree |
+     # | transactionFromAccountOne |
+     # | transactionFromAccountTwo |
+      | transactionFromAccountThree |

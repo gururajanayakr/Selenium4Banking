@@ -25,7 +25,7 @@ public class BaseClassAT {
 
     protected static ThreadLocal<RemoteWebDriver> remoteDriver = new ThreadLocal<RemoteWebDriver>();
     public static WebDriver driver;
-    public Capabilities capabilities;
+    public static Capabilities capabilities;
     public static Logger logger = LogManager.getLogger(BaseClassAT.class);
     public static String propertyValue;
 
@@ -43,7 +43,7 @@ public class BaseClassAT {
     }
 
     @BeforeMethod
-    public void openBrowser() throws IOException {
+    public static WebDriver openBrowser() throws IOException {
         String browser = getProperty("browser");
         String grid = getProperty("grid");
         if(grid.equals("true")) {
@@ -60,19 +60,27 @@ public class BaseClassAT {
             }
             remoteDriver.set(new RemoteWebDriver(new URL("http://192.168.197.1:4444"),capabilities));
         } else {
-            if (browser.equals("chrome")) {
-                ChromeOptions options = new ChromeOptions();
-                options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
-                driver = new ChromeDriver(options);
-            } else if (browser.equals("firefox")) {
-                driver = new FirefoxDriver();
-            } else {
-                driver = new EdgeDriver();
+            if(driver==null)
+            {
+                if (browser.equals("chrome")) {
+                    ChromeOptions options = new ChromeOptions();
+                    options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+                    driver = new ChromeDriver(options);
+                } else if (browser.equals("firefox")) {
+                    driver = new FirefoxDriver();
+                } else {
+                    driver = new EdgeDriver();
+                }
             }
-            driver.manage().window().maximize();
-            driver.get(getProperty("url"));
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         }
+        return driver;
+    }
+
+    public void openApplication() throws IOException {
+        openBrowser();
+        driver.manage().window().maximize();
+        driver.get(getProperty("url"));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
 
     @AfterMethod

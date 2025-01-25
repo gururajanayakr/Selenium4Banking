@@ -34,5 +34,26 @@
     "postCd" : "560031",
     "customerDropdown" : "---Customer Name---,Hermoine Granger,Harry Potter,Ron Weasly,Albus Dumbledore,Neville Longbottom,Aaradhya Nayak",
     "currencyDropdown" : "---Currency---,Dollar,Pound,Rupee"
+  },
+  "transactionFromAccountOne"  : {
+    "name" : "Harry Potter",
+    "accountNo" : "1005",
+    "depositAmount" : "50000",
+    "withdrawlAmount" : "10000",
+    "balanceAmount" : "40000"
+  },
+  "transactionFromAccountTwo"  : {
+    "name" : "Ron Weasly",
+    "accountNo" : "1009",
+    "depositAmount" : "60000",
+    "withdrawlAmount" : "10000",
+    "balanceAmount" : "50000"
+  },
+  "transactionFromAccountThree"  : {
+    "name" : "Neville Longbottom",
+    "accountNo" : "1013",
+    "depositAmount" : "75000",
+    "withdrawlAmount" : "1000",
+    "balanceAmount" : "73000"
   }
 }
