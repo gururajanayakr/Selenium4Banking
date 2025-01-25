@@ -20,7 +20,7 @@ public class ManagerCustomerCreationAT extends BaseClassAT {
 
     @Given("user navigate to application url")
     public void user_navigate_to_application_url() throws IOException {
-        openBrowser();
+        openApplication();
     }
 
     @When("login with {string} option")
