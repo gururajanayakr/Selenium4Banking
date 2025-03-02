@@ -42,7 +42,6 @@ public class BaseClassAT {
         return propertyValue;
     }
 
-    @BeforeMethod
     public static WebDriver openBrowser() throws IOException {
         String browser = getProperty("browser");
         String grid = getProperty("grid");
@@ -83,7 +82,6 @@ public class BaseClassAT {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
 
-    @AfterMethod
     public void closeBrowser() {
         Log.info("Closing the browser");
         driver.quit();

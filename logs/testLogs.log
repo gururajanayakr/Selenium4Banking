@@ -282,3 +282,45 @@
 2025-03-02 18:46:17 [main] INFO  Log - Getting the element by text
 2025-03-02 18:46:18 [main] INFO  Log - Testcase is User initiating the transaction in the account failed and screenshot is taken
 2025-03-02 18:46:18 [main] INFO  Log - Attaching to report
+2025-03-02 19:27:39 [main] INFO  Log - Open Application URL
+2025-03-02 19:27:39 [main] INFO  Log - Getting value for the property {}
+2025-03-02 19:27:39 [main] INFO  Log - Getting value for the property {}
+2025-03-02 19:27:48 [main] INFO  Log - Opening the browser
+2025-03-02 19:27:48 [main] INFO  Log - Maximizing the Window
+2025-03-02 19:27:49 [main] INFO  Log - Opening the application
+2025-03-02 19:27:49 [main] INFO  Log - Getting value for the property {}
+2025-03-02 19:27:57 [main] INFO  Log - Getting value for the property {}
+2025-03-02 19:27:57 [main] INFO  Log - Getting value for the property {}
+2025-03-02 19:28:01 [main] INFO  Log - Opening the browser
+2025-03-02 19:28:01 [main] INFO  Log - Testcase is Creating Account for the Customer through Manager Login failed and screenshot is taken
+2025-03-02 19:28:05 [main] INFO  Log - Attaching to report
+2025-03-02 19:28:05 [main] INFO  Log - Open Application URL
+2025-03-02 19:28:05 [main] INFO  Log - Getting value for the property {}
+2025-03-02 19:28:05 [main] INFO  Log - Getting value for the property {}
+2025-03-02 19:28:11 [main] INFO  Log - Opening the browser
+2025-03-02 19:28:11 [main] INFO  Log - Maximizing the Window
+2025-03-02 19:28:12 [main] INFO  Log - Opening the application
+2025-03-02 19:28:12 [main] INFO  Log - Getting value for the property {}
+2025-03-02 19:28:24 [main] INFO  Log - Testcase is Creating Account for the Customer through Manager Login failed and screenshot is taken
+2025-03-02 19:28:24 [main] INFO  Log - Attaching to report
+2025-03-02 19:28:25 [main] INFO  Log - Open Application URL
+2025-03-02 19:28:25 [main] INFO  Log - Getting value for the property {}
+2025-03-02 19:28:25 [main] INFO  Log - Getting value for the property {}
+2025-03-02 19:28:29 [main] INFO  Log - Opening the browser
+2025-03-02 19:28:29 [main] INFO  Log - Maximizing the Window
+2025-03-02 19:28:30 [main] INFO  Log - Opening the application
+2025-03-02 19:28:30 [main] INFO  Log - Getting value for the property {}
+2025-03-02 19:28:45 [main] INFO  Log - Testcase is Creating Account for the Customer through Manager Login failed and screenshot is taken
+2025-03-02 19:28:45 [main] INFO  Log - Open Application URL
+2025-03-02 19:28:45 [main] INFO  Log - Getting value for the property {}
+2025-03-02 19:28:45 [main] INFO  Log - Getting value for the property {}
+2025-03-02 19:28:48 [main] INFO  Log - Opening the browser
+2025-03-02 19:28:48 [main] INFO  Log - Maximizing the Window
+2025-03-02 19:28:49 [main] INFO  Log - Opening the application
+2025-03-02 19:28:49 [main] INFO  Log - Getting value for the property {}
+2025-03-02 19:28:51 [main] INFO  Log - Login with given Option
+2025-03-02 19:28:51 [main] INFO  Log - Getting the element by contains text
+2025-03-02 19:28:52 [main] INFO  Log - Testcase is Creating the Customer through Manager Login failed and screenshot is taken
+2025-03-02 19:28:53 [main] INFO  Log - Open Application URL
+2025-03-02 19:28:53 [main] INFO  Log - Getting value for the property {}
+2025-03-02 19:28:53 [main] INFO  Log - Getting value for the property {}
