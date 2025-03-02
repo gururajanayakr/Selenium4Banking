@@ -7,6 +7,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.shop.pages.BasePage;
 import org.shop.utilities.JsonUtils;
+import org.shop.utilities.Log;
 import org.testng.Assert;
 
 import java.io.IOException;
@@ -20,21 +21,25 @@ public class ManagerCustomerCreationAT extends BaseClassAT {
 
     @Given("user navigate to application url")
     public void user_navigate_to_application_url() throws IOException {
+        Log.info("Open Application URL");
         openApplication();
     }
 
     @When("login with {string} option")
     public void login_with_option(String option) {
+        Log.info("Login with given Option");
         BasePage.getElementByContainsText(driver, option).click();
     }
 
     @When("navigate to {string} page")
     public void navigate_to_page(String buttonText) {
+        Log.info("Navigate to the page");
         BasePage.getElementByContainsText(driver, buttonText).click();
     }
 
     @When("user fills the fields:")
     public void user_fills_the_fields(DataTable dataTable) {
+        Log.info("User fills the values as per the data table");
         dataTable.asMaps(String.class, String.class).forEach(
                 row -> {
                     String key = row.get("key");
@@ -51,17 +56,20 @@ public class ManagerCustomerCreationAT extends BaseClassAT {
 
     @When("click on {string} button")
     public void click_on_button(String buttonText) {
+        Log.info("Click on the button");
         BasePage.getElementByText(driver, buttonText).click();
     }
 
     @Then("get {string} and accept the alert")
     public void getAndAcceptTheAlert(String nameId) {
+        Log.info("Accept the alert");
         String id = BasePage.performAlertActions(driver);
         System.out.println(STR."\{nameId} is : \{id}");
     }
 
     @Then("verify customer is created")
     public void verify_customer_is_created() {
+        Log.info("Verify the customer created");
         String customerName = customerData.get("fName");
         BasePage.scrollToRequiredElement(driver, customerName);
         Assert.assertEquals(BasePage.getElementByText(driver, customerName).getText(), customerName);

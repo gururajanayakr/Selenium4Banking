@@ -4,6 +4,7 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import org.shop.pages.BasePage;
 import org.shop.utilities.JsonUtils;
+import org.shop.utilities.Log;
 import org.testng.Assert;
 
 import java.io.FileNotFoundException;
@@ -20,6 +21,7 @@ public class ManagerAccountCreationAT extends BaseClassAT {
 
     @And("verify dropdown options {string} for {string}")
     public void verifyDropdownOptions(String dropdownLabel, String testcase) throws FileNotFoundException {
+        Log.info("Verify Dropdown Option");
         actualDropdownText = BasePage.validateDropdownOptions(BasePage.dropdownElement(driver, dropdownLabel));
         String testcaseName = "";
         String testcaseKey = "";
@@ -35,6 +37,7 @@ public class ManagerAccountCreationAT extends BaseClassAT {
 
     @And("select the newly created customer by firstname and lastname for {string}")
     public void selectTheNewlyCreatedCustomerByFirstnameAndLastname(String label,DataTable dataTable) {
+        Log.info("Selecting value from the dropdown from the name");
         dataTable.asMaps(String.class, String.class).forEach(
                 row -> {
                     String key = row.get("key");
@@ -55,6 +58,7 @@ public class ManagerAccountCreationAT extends BaseClassAT {
 
     @And("select {string} as dropdown option for {string}")
     public void selectTheDropdownOption(String currencyValue, String currencyDropdown) {
+        Log.info("Selecting the value from currency");
         BasePage.selectDropdownOption(BasePage.dropdownElement(driver,currencyDropdown),currencyValue);
     }
 }

@@ -15,14 +15,12 @@ public class ScreenshotUtils {
         try {
             // Capture screenshot as file
             File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-
             // Define screenshot path
             String timestamp = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
             String screenshotName = STR."screenshots/\{scenarioName}_\{timestamp}.png";
-            File destFile = new File(System.getProperty("user.dir")+screenshotName);
+            File destFile = new File(STR."\{System.getProperty("user.dir")}/FailedScreenshots/\{screenshotName}");
             // Save the screenshot
             FileUtils.copyFile(srcFile,destFile);
-            System.out.println(STR."Screenshot saved: \{screenshotName}");
         } catch (IOException e) {
             System.err.println(STR."Failed to save screenshot: \{e.getMessage()}");
         }

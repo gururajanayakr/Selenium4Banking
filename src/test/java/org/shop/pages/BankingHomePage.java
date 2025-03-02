@@ -26,8 +26,4 @@ public class BankingHomePage extends BasePage {
         this.driver = driver;
     }
 
-    public void testLogin() {
-
-    }
-
 }

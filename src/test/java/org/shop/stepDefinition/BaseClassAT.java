@@ -12,6 +12,7 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.shop.utilities.Log;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -27,7 +28,6 @@ public class BaseClassAT {
     protected static ThreadLocal<RemoteWebDriver> remoteDriver = new ThreadLocal<RemoteWebDriver>();
     public static WebDriver driver;
     public static Capabilities capabilities;
-    public static Logger logger = LogManager.getLogger(BaseClassAT.class);
     public static String propertyValue;
 
     public WebDriver getWebDriver() {
@@ -39,7 +39,7 @@ public class BaseClassAT {
         Properties properties = new Properties();
         properties.load(fileInputStream);
         propertyValue = properties.getProperty(key);
-        logger.info("Getting value for the property {}", key);
+        Log.info("Getting value for the property {}");
         return propertyValue;
     }
 
@@ -71,19 +71,23 @@ public class BaseClassAT {
                 driver = new EdgeDriver();
             }
         }
+        Log.info("Opening the browser");
         return driver;
     }
 
     public void openApplication() throws IOException {
         openBrowser();
+        Log.info("Maximizing the Window");
         driver.manage().window().maximize();
+        Log.info("Opening the application");
         driver.get(getProperty("url"));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
 
     @AfterMethod
     public void closeBrowser() {
-        driver.close();
+        Log.info("Closing the browser");
+        driver.quit();
     }
 
 }

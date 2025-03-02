@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.shop.stepDefinition.BaseClassAT;
 import org.shop.utilities.JsonUtils;
+import org.shop.utilities.Log;
 
 import java.io.FileNotFoundException;
 import java.time.Duration;
@@ -28,36 +29,42 @@ public class BasePage {
 
     @Step("To get Element by contains Text")
     public static WebElement getElementByContainsText(WebDriver driver, String text) {
+        Log.info("Getting the element by contains text");
         String xpathExpression = STR."//*[contains(text(),'\{text}')]";
         return driver.findElement(By.xpath(xpathExpression));
     }
 
     @Step("To get Element by Text")
     public static WebElement getElementByText(WebDriver driver, String text) {
+        Log.info("Getting the element by text");
         String xpathExpression = STR."//*[text()='\{text}']";
         return driver.findElement(By.xpath(xpathExpression));
     }
 
-    @Step("To get Element by Text")
+    @Step("To get Element by Type")
     public static WebElement getElementByType(WebDriver driver, String type) {
+        Log.info("Getting the element by type");
         String xpathExpression = STR."//*[text()='\{type}']";
         return driver.findElement(By.xpath(xpathExpression));
     }
 
     @Step("To get Element by ng-model")
     public static WebElement getElementByNgModel(WebDriver driver, String placeholder) {
+        Log.info("Getting the element by ng-model");
         String xpathExpression = STR."//*[contains(@ng-model,'\{placeholder}')]";
         return driver.findElement(By.xpath(xpathExpression));
     }
 
     @Step("To send input text to textbox")
     public void performSendKeysAction(WebElement textbox, String inputText) {
+        Log.info("Enter the value inside the textbox");
         wait.until(ExpectedConditions.elementToBeClickable(textbox)).clear();
         textbox.sendKeys(inputText);
     }
 
     @Step("To handle alert box")
     public static String performAlertActions(WebDriver driver) {
+        Log.info("Handling the alert box");
         Alert alert = driver.switchTo().alert();
         String alertText = alert.getText();
         System.out.println(alertText);
@@ -69,6 +76,7 @@ public class BasePage {
 
     @Step("To scroll till required element")
     public static void scrollToRequiredElement(WebDriver driver, String requiredName) {
+        Log.info("scrolling the page till the requires element");
         WebElement requiredElement = getElementByText(driver, requiredName);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);",requiredElement);
@@ -76,6 +84,7 @@ public class BasePage {
 
     @Step("To get the dropdown element")
     public static WebElement dropdownElement(WebDriver driver, String label) {
+        Log.info("Handling the dropdown element");
        return driver.findElement(By.xpath(STR."//*[contains(text(),'\{label}')]//following-sibling::select"));
     }
 
