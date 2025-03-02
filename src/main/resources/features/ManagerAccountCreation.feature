@@ -1,6 +1,6 @@
 #Created By: Gururaja Nayak
-Feature: Manager Creating the Customer
-  Scenario Outline: Creating the Customer through Manager Login
+Feature: Manager Creating the account for the Customer
+  Scenario Outline: Creating Account for the Customer through Manager Login
     Given user navigate to application url
     When login with "Bank Manager Login" option
     And navigate to "Add Customer" page
