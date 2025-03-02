@@ -3,6 +3,8 @@ package org.shop.stepDefinition;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.shop.utilities.Log;
 import org.shop.utilities.ScreenshotUtils;
@@ -24,6 +26,9 @@ public class Hooks {
         if (scenario.isFailed()) {
             Log.error(STR."Testcase is \{scenario.getName()} failed and screenshot is taken");
             ScreenshotUtils.takeScreenshot(driver, scenario.getName());
+            Log.info("Attaching to report");
+            byte[] reportScr = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+            scenario.attach(reportScr,"image/png","Failed screenshot");
         }
     }
 }

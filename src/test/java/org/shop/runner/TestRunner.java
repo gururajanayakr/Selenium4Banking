@@ -11,7 +11,8 @@ import org.junit.runner.RunWith;
         glue = "org/shop/stepDefinition",
         plugin = {
                 "pretty",
-                "html:target/cucumber-reports.html"
+                "html:target/cucumber-reports.html",
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
         },
         monochrome = true
 )

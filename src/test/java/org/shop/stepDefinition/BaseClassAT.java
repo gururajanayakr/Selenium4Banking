@@ -24,7 +24,6 @@ import java.util.Collections;
 import java.util.Properties;
 
 public class BaseClassAT {
-
     protected static ThreadLocal<RemoteWebDriver> remoteDriver = new ThreadLocal<RemoteWebDriver>();
     public static WebDriver driver;
     public static Capabilities capabilities;
