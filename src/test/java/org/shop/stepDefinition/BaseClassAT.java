@@ -1,5 +1,6 @@
 package org.shop.stepDefinition;
 
+import io.cucumber.java.Before;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Capabilities;
@@ -60,17 +61,14 @@ public class BaseClassAT {
             }
             remoteDriver.set(new RemoteWebDriver(new URL("http://192.168.197.1:4444"),capabilities));
         } else {
-            if(driver==null)
-            {
-                if (browser.equals("chrome")) {
-                    ChromeOptions options = new ChromeOptions();
-                    options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
-                    driver = new ChromeDriver(options);
-                } else if (browser.equals("firefox")) {
-                    driver = new FirefoxDriver();
-                } else {
-                    driver = new EdgeDriver();
-                }
+            if (browser.equals("chrome")) {
+                ChromeOptions options = new ChromeOptions();
+                options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+                driver = new ChromeDriver(options);
+            } else if (browser.equals("firefox")) {
+                driver = new FirefoxDriver();
+            } else {
+                driver = new EdgeDriver();
             }
         }
         return driver;

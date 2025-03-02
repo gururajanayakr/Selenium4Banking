@@ -29,6 +29,6 @@
 
     Examples:
       | testCaseName |
-     # | transactionFromAccountOne |
-     # | transactionFromAccountTwo |
+      | transactionFromAccountOne |
+      | transactionFromAccountTwo |
       | transactionFromAccountThree |
