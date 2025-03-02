@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" thread-count="10" name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="AccountCreation">
+        <classes>
+                <class name="org.shop.runner.TestRunnerAccount"/>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="CustomerCreation">
+        <classes>
+            <class name="org.shop.runner.TestRunnerCustomer"/>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="Transaction">
+        <classes>
+            <class name="org.shop.runner.TestRunnerTransaction"/>
+        </classes>
+    </test>
+</suite>
